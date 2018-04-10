@@ -2,7 +2,7 @@ defmodule NDETest do
   use ExUnit.Case
   doctest NDE
 
-  test "greets the world" do
-    assert NDE.hello() == :world
+  test "counter starts at 1" do
+    assert NDE.Counter.inc == 1
   end
 end

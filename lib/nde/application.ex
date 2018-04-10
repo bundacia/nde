@@ -8,8 +8,8 @@ defmodule NDE.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Starts a worker by calling: NDE.Worker.start_link(arg)
-      # {NDE.Worker, arg},
+      # Starts a counter by calling: NDE.Counter.start_link(0)
+      {NDE.Counter, 0},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
