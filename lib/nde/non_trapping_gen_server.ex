@@ -46,10 +46,8 @@ defmodule NDE.NonTrappingGenServer do
   iex(21)> Process.alive? pid
   false
 
-
   iex(22)> {:ok, pid} = GenServer.start(NDE.NonTrappingGenServer, :a)
   {:ok, #PID<0.154.0>}
-
 
   iex(23)> send pid, :exit
   a: (#PID<0.154.0>) Calling Kernel.exit
@@ -92,19 +90,16 @@ defmodule NDE.NonTrappingGenServer do
   iex(31)> send pid, :hello
   a: (#PID<0.164.0>) got msg: :hello
   :hello
-
   iex(32)> Process.alive? pid
   true
 
   iex(33)> Process.exit(pid, :normal)
   true
-
   iex(34)> Process.alive? pid
   true
 
   iex(35)> Process.exit(pid, :shutdown)
   true
-
   iex(36)> Process.alive? pid
   false
 
